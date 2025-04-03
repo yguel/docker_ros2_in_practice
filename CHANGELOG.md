@@ -1,6 +1,16 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+<a name="v1.1.0"></a>
+## [v1.1.0] - 2025-04-03
+
+### Chore
+- Add template2instance for the docker image
+
+### Feature
+- Add template2instance for the docker image
+
+
 <a name="v1.0.0"></a>
 ## v1.0.0 - 2025-03-18
 

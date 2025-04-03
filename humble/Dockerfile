@@ -42,6 +42,23 @@ RUN apt-get update -q && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/*
 
+# Install wget
+RUN apt-get update -q && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y \
+        wget && \
+    apt-get autoclean && \
+    apt-get autoremove && \
+    rm -rf /var/lib/apt/lists/*
+
+# # Get and install template2instance
+RUN cd /tmp && wget --content-disposition "https://seafile.unistra.fr/f/af9e58e541c04baba959/?dl=1" && \
+    apt-get update -q && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -f -y ./template2instance_1.0_amd64.deb && \
+    rm /tmp/template2instance_1.0_amd64.deb && \
+    apt-get autoclean && \
+    apt-get autoremove && \
+    rm -rf /var/lib/apt/lists/*
+
 COPY ./entrypoint.sh /
 RUN dos2unix /entrypoint.sh
 ENTRYPOINT [ "/bin/bash", "-c", "/entrypoint.sh" ]
