@@ -51,10 +51,10 @@ RUN apt-get update -q && \
     rm -rf /var/lib/apt/lists/*
 
 # # Get and install template2instance
-RUN cd /tmp && wget --content-disposition "https://seafile.unistra.fr/f/af9e58e541c04baba959/?dl=1" && \
+RUN cd /tmp && wget --content-disposition "https://seafile.unistra.fr/f/650b8b4976bc40e2b62c/?dl=1" && \
     apt-get update -q && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -f -y ./template2instance_1.0_amd64.deb && \
-    rm /tmp/template2instance_1.0_amd64.deb && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -f -y ./template2instance_1.0.1_amd64.deb && \
+    rm /tmp/template2instance_1.0.1_amd64.deb && \
     apt-get autoclean && \
     apt-get autoremove && \
     rm -rf /var/lib/apt/lists/*

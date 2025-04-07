@@ -1,6 +1,13 @@
 <a name="unreleased"></a>
 ## [Unreleased]
 
+<a name="v1.1.1"></a>
+## [v1.1.0] - 2025-04-07
+
+### Fix
+- Fix the template2instance version for the docker image
+
+
 <a name="v1.1.0"></a>
 ## [v1.1.0] - 2025-04-03
 

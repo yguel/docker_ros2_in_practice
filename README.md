@@ -47,6 +47,11 @@ cd humble && docker buildx build --platform=linux/amd64 --progress=plain -t ygue
 cd humble && docker buildx build --platform=linux/arm64 --progress=plain -t yguel/ros2_in_practice:humble-arm64 .
 ```
 
+Manually push the image to Docker Hub
+```sh
+docker push yguel/ros2_in_practice:humble
+```
+
 ## Docker tags on hub.docker.com
 
 * [`humble`](https://hub.docker.com/r/yguel/ros2_in_practice/tags?page=1&name=humble), [`latest`](https://hub.docker.com/r/yguel/ros2_in_practice/tags?page=1&name=latest) which is based on [`humble/Dockerfile`](./humble/Dockerfile)
